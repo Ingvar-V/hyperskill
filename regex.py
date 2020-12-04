@@ -6,7 +6,7 @@ sys.setrecursionlimit(6000)
 def char_match(pattern, char):
     if pattern == '.':     # если шаблон точка, то возвращаем ИСТИНА
         return True
-    return pattern == char # возращаем ИСТИНА/ЛОЖь в завис-ти от того совпадает ли смивол в слове и шаблоне
+    return pattern == char # возращаем ИСТИНА/ЛОЖЬ в завис-ти от того совпадает ли смивол в слове и шаблоне
 
 # Сравниваем слово одинаковой длины. Вызываем char_match для каждого символа рекурсивно
 def word_match(pattern, word):
@@ -17,7 +17,7 @@ def word_match(pattern, word):
         if pattern == '$':
             return True
         else:
-            return False
+            return False # если символы в шаблоне остались, а в слове нет, то возращаем ЛОЖЬ, рекурсия "схлопывается"
 
     if len(pattern) == 1:
         return char_match(pattern[0], word[0])
