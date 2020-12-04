@@ -45,7 +45,7 @@ def word_match(pattern, word):
     if not char_match(pattern[0], word[0]):
         return False
 
-    return word_match(pattern[1:], word[1:])
+    return word_match(pattern[1:], word[1:]) # рекурсия
 
 
 # Сравниваем строку произвольной длины с шаблоном
